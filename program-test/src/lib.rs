@@ -219,8 +219,7 @@ pub fn invoke_builtin_anchor_function(
         invoke_context
             .transaction_context
             .get_current_instruction_context()?,
-        true, // should_cap_ix_accounts
-        true, // copy_account_data // There is no VM so direct mapping can not be implemented here
+        true // should_cap_ix_accounts
     )?;
 
     // Deserialize data back into instruction params
